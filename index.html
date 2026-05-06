@@ -871,6 +871,291 @@
         z-index: 0;
         opacity: 0.4;
       }
+
+      /* ── Project "private" badge ──────────────────────────── */
+      .project-link-private {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 16px;
+        border-radius: var(--radius-sm);
+        font-size: 0.82rem;
+        font-weight: 600;
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text2);
+        border: 1px dashed rgba(255, 255, 255, 0.15);
+        cursor: default;
+        user-select: none;
+      }
+
+      /* ── CV Modal ─────────────────────────────────────────── */
+      .cv-modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(8px);
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+
+      .cv-modal-overlay.open {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .cv-modal {
+        background: #0f0f1a;
+        border: 1px solid var(--border2);
+        border-radius: 20px;
+        width: 100%;
+        max-width: 760px;
+        max-height: 88vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transform: translateY(24px) scale(0.97);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(124, 58, 237, 0.15);
+      }
+
+      .cv-modal-overlay.open .cv-modal {
+        transform: translateY(0) scale(1);
+      }
+
+      .cv-modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 28px;
+        border-bottom: 1px solid var(--border);
+        flex-shrink: 0;
+      }
+
+      .cv-modal-header h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .cv-modal-header h3 i {
+        color: var(--accent2);
+      }
+
+      .cv-modal-actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .cv-close-btn {
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+        border: 1px solid var(--border2);
+        background: var(--surface2);
+        color: var(--text2);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        transition: all var(--transition);
+      }
+
+      .cv-close-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--text);
+      }
+
+      .cv-modal-body {
+        overflow-y: auto;
+        padding: 32px 36px;
+        flex: 1;
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent) transparent;
+      }
+
+      /* CV content typography */
+      .cv-content {
+        font-family: "Inter", sans-serif;
+        color: var(--text);
+        line-height: 1.65;
+      }
+
+      .cv-name {
+        font-size: 1.9rem;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        text-align: center;
+        background: var(--grad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 8px;
+      }
+
+      .cv-subtitle {
+        text-align: center;
+        color: var(--text2);
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+      }
+
+      .cv-contact-line {
+        text-align: center;
+        font-size: 0.82rem;
+        color: var(--text2);
+        margin-bottom: 28px;
+      }
+
+      .cv-contact-line a {
+        color: var(--accent2);
+        text-decoration: none;
+      }
+
+      .cv-section-heading {
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent2);
+        border-bottom: 1px solid var(--border2);
+        padding-bottom: 6px;
+        margin: 24px 0 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .cv-section-heading::before {
+        content: "";
+        width: 18px;
+        height: 2px;
+        background: var(--grad2);
+        border-radius: 1px;
+        flex-shrink: 0;
+      }
+
+      .cv-entry {
+        margin-bottom: 14px;
+      }
+
+      .cv-entry-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+
+      .cv-entry-title {
+        font-weight: 700;
+        font-size: 0.92rem;
+      }
+
+      .cv-entry-date {
+        font-size: 0.78rem;
+        color: var(--text2);
+        font-style: italic;
+      }
+
+      .cv-entry-sub {
+        color: var(--text2);
+        font-size: 0.85rem;
+        margin-top: 2px;
+      }
+
+      .cv-entry-link {
+        color: var(--accent2);
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .cv-bullets {
+        list-style: none;
+        padding: 0;
+        margin: 6px 0 0 0;
+      }
+
+      .cv-bullets li {
+        font-size: 0.85rem;
+        color: var(--text2);
+        padding-left: 14px;
+        position: relative;
+        margin-bottom: 3px;
+      }
+
+      .cv-bullets li::before {
+        content: "›";
+        position: absolute;
+        left: 0;
+        color: var(--accent2);
+        font-weight: 700;
+      }
+
+      .cv-skills-row {
+        font-size: 0.87rem;
+        color: var(--text2);
+        margin-bottom: 6px;
+      }
+
+      .cv-skills-row strong {
+        color: var(--text);
+      }
+
+      .cv-pill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 6px;
+      }
+
+      .cv-pill {
+        padding: 4px 12px;
+        border-radius: 100px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        background: var(--surface2);
+        border: 1px solid var(--border2);
+        color: var(--text2);
+      }
+
+      .cv-ref-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .cv-ref-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        padding: 14px 16px;
+        font-size: 0.83rem;
+        color: var(--text2);
+      }
+
+      .cv-ref-card strong {
+        color: var(--text);
+        display: block;
+        margin-bottom: 4px;
+        font-size: 0.88rem;
+      }
+
+      @media (max-width: 600px) {
+        .cv-modal-body { padding: 24px 20px; }
+        .cv-ref-grid { grid-template-columns: 1fr; }
+      }
     </style>
   </head>
   <body>
@@ -902,14 +1187,19 @@
           <span id="typed-role"></span><span class="typed-cursor"></span>
         </h1>
         <p class="hero-sub">
-          I build high-performance software and intuitive digital experiences —
-          from native Java applications to modern web platforms.
+          I build robust backend systems and AI-powered applications — from
+          Spring Boot microservices to low-level C programs and intelligent
+          pipelines.
         </p>
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">
             <i class="fas fa-chevron-right"></i>
             View My Work
           </a>
+          <button class="btn btn-ghost" id="open-cv-btn">
+            <i class="fas fa-file-alt"></i>
+            View CV
+          </button>
           <a href="#contact" class="btn btn-ghost">Get In Touch</a>
         </div>
       </div>
@@ -943,14 +1233,15 @@
               >
             </h2>
             <p>
-              I'm a software engineer with a deep focus on Java native
-              development, performance engineering, and building tools that
-              developers love. I care about clean architecture, readable code,
-              and experiences that feel fast.
+              I'm a backend and AI engineer focused on Java Spring Boot and C,
+              building scalable microservices, REST APIs, and AI-powered
+              pipelines. I care about clean architecture, performance, and
+              systems that are reliable under pressure.
             </p>
             <p>
-              When I'm not coding, I explore low-level systems, contribute to
-              open-source projects, and write about software design patterns.
+              When I'm not coding, I explore low-level systems programming,
+              experiment with LLMs and AI tooling, and dig into distributed
+              systems design.
             </p>
             <div class="about-stats">
               <div class="stat">
@@ -990,37 +1281,37 @@
             <div class="skill-icon"><i class="fas fa-leaf"></i></div>
             <div class="skill-name">Spring Boot</div>
           </div>
-          <div class="skill-card reveal reveal-delay-2">
-            <div class="skill-icon"><i class="fab fa-android"></i></div>
-            <div class="skill-name">Android</div>
+          <div class="skill-card reveal reveal-delay-1">
+            <div class="skill-icon"><i class="fas fa-memory"></i></div>
+            <div class="skill-name">C</div>
           </div>
           <div class="skill-card reveal reveal-delay-2">
+            <div class="skill-icon"><i class="fab fa-python"></i></div>
+            <div class="skill-name">Python</div>
+          </div>
+          <div class="skill-card reveal reveal-delay-2">
+            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+            <div class="skill-name">LLMs / AI APIs</div>
+          </div>
+          <div class="skill-card reveal reveal-delay-2">
+            <div class="skill-icon"><i class="fas fa-plug"></i></div>
+            <div class="skill-name">REST APIs</div>
+          </div>
+          <div class="skill-card reveal reveal-delay-3">
             <div class="skill-icon"><i class="fas fa-database"></i></div>
             <div class="skill-name">SQL</div>
           </div>
-          <div class="skill-card reveal reveal-delay-2">
+          <div class="skill-card reveal reveal-delay-3">
+            <div class="skill-icon"><i class="fas fa-stream"></i></div>
+            <div class="skill-name">Kafka / Messaging</div>
+          </div>
+          <div class="skill-card reveal reveal-delay-3">
             <div class="skill-icon"><i class="fas fa-cogs"></i></div>
             <div class="skill-name">Maven / Gradle</div>
-          </div>
-          <div class="skill-card reveal reveal-delay-3">
-            <div class="skill-icon"><i class="fab fa-js"></i></div>
-            <div class="skill-name">JavaScript</div>
-          </div>
-          <div class="skill-card reveal reveal-delay-3">
-            <div class="skill-icon"><i class="fas fa-code"></i></div>
-            <div class="skill-name">TypeScript</div>
-          </div>
-          <div class="skill-card reveal reveal-delay-3">
-            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
-            <div class="skill-name">Node.js</div>
           </div>
           <div class="skill-card reveal reveal-delay-4">
             <div class="skill-icon"><i class="fab fa-docker"></i></div>
             <div class="skill-name">Docker</div>
-          </div>
-          <div class="skill-card reveal reveal-delay-4">
-            <div class="skill-icon"><i class="fas fa-plug"></i></div>
-            <div class="skill-name">REST APIs</div>
           </div>
           <div class="skill-card reveal reveal-delay-4">
             <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
@@ -1277,6 +1568,141 @@
               </div>
             </div>
           </div>
+
+          <div class="project-card reveal reveal-delay-2">
+            <div
+              class="project-banner"
+              style="background: linear-gradient(135deg, #0a1a0f, #1a3a20)"
+            >
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag tag-purple">Java</span>
+                <span class="tag tag-cyan">LWJGL</span>
+                <span class="tag tag-green">OpenGL</span>
+              </div>
+              <div class="project-title">Ludo Simulation (LUDO-CS)</div>
+              <p class="project-desc">
+                A fully functional Ludo game built with LWJGL and OpenGL,
+                featuring four AI-driven players with distinct strategies.
+                Includes dynamic movement directions, mystery cells with random
+                effects, and rule-based progression.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Senaath-Suraweera/Ludo-LWJGL"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-link project-link-github"
+                >
+                  <i class="fab fa-github"></i>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal reveal-delay-3">
+            <div
+              class="project-banner"
+              style="background: linear-gradient(135deg, #001225, #003366)"
+            >
+              <i class="fas fa-plane"></i>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag tag-purple">Java</span>
+                <span class="tag tag-cyan">OOP</span>
+              </div>
+              <div class="project-title">Plane Management Application</div>
+              <p class="project-desc">
+                A console-based Java application for managing aircraft seat
+                reservations. Supports booking and cancellation, ticket
+                generation, reservation search, and seat availability display,
+                following clean object-oriented design principles.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Senaath-Suraweera/Plane-Ticket-Management-System"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-link project-link-github"
+                >
+                  <i class="fab fa-github"></i>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal reveal-delay-1">
+            <div
+              class="project-banner"
+              style="background: linear-gradient(135deg, #0a1520, #0d2d40)"
+            >
+              <i class="fas fa-comments"></i>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag tag-green">Spring Boot</span>
+                <span class="tag tag-purple">JavaFX</span>
+                <span class="tag tag-cyan">WebSockets</span>
+              </div>
+              <div class="project-title">Real-Time Chat Application</div>
+              <p class="project-desc">
+                A real-time multi-user chat application using Spring Boot on the
+                backend and JavaFX for the client UI. Enables simultaneous
+                connections and instant messaging via WebSocket-based
+                communication with live broadcast and session handling.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Senaath-Suraweera/ChatApp-Backend"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-link project-link-github"
+                >
+                  <i class="fab fa-github"></i>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card reveal reveal-delay-2">
+            <div
+              class="project-banner"
+              style="background: linear-gradient(135deg, #1a0f00, #2d1a00)"
+            >
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag tag-purple">Java</span>
+                <span class="tag tag-orange">JAX-RS</span>
+                <span class="tag tag-cyan">REST API</span>
+              </div>
+              <div class="project-title">Bookstore API</div>
+              <p class="project-desc">
+                A RESTful API for managing a bookstore system built with JAX-RS.
+                Supports adding, updating, retrieving, and deleting books along
+                with customer order and inventory management, following REST
+                principles with JSON-based communication.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/Senaath-Suraweera/BookStoreAPI"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-link project-link-github"
+                >
+                  <i class="fab fa-github"></i>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1329,6 +1755,229 @@
       </div>
     </section>
 
+    <!-- CV Modal -->
+    <div class="cv-modal-overlay" id="cv-modal-overlay">
+      <div class="cv-modal" role="dialog" aria-modal="true" aria-label="Curriculum Vitae">
+        <div class="cv-modal-header">
+          <h3><i class="fas fa-file-alt"></i> Curriculum Vitae</h3>
+          <div class="cv-modal-actions">
+            <a href="cv.pdf" download="Senaath_Suraweera_CV.pdf" class="btn btn-ghost" style="padding:8px 16px;font-size:0.82rem;">
+              <i class="fas fa-download"></i> Download PDF
+            </a>
+            <button class="cv-close-btn" id="close-cv-btn" aria-label="Close">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+        <div class="cv-modal-body">
+          <div class="cv-content">
+
+            <div class="cv-name">SENAATH SURAWEERA</div>
+            <div class="cv-subtitle">Computer Science Undergraduate</div>
+            <div class="cv-contact-line">
+              <a href="mailto:senaathsuraweera2003@gmail.com">senaathsuraweera2003@gmail.com</a>
+              &nbsp;|&nbsp; +94 705 216 508 &nbsp;|&nbsp; Battaramulla, Sri Lanka
+              &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/senaath-suraweera" target="_blank" rel="noopener">linkedin.com/in/senaath-suraweera</a>
+            </div>
+
+            <div class="cv-section-heading">Profile</div>
+            <p style="font-size:0.88rem;color:var(--text2);line-height:1.7;">
+              Motivated Computer Science undergraduate with a strong foundation in software development, problem-solving, and system design. Experienced in developing full-stack applications and academic projects using modern technologies. Passionate about building scalable solutions and continuously learning emerging technologies.
+            </p>
+
+            <div class="cv-section-heading">Education</div>
+            <div class="cv-entry">
+              <div class="cv-entry-header">
+                <span class="cv-entry-title">University of Colombo School of Computing</span>
+                <span class="cv-entry-date">Present</span>
+              </div>
+              <div class="cv-entry-sub">B.Sc. (General) in Computer Science</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-header">
+                <span class="cv-entry-title">Informatics Institute of Technology</span>
+                <span class="cv-entry-date">Present</span>
+              </div>
+              <div class="cv-entry-sub">B.Sc. (Hons) in Computer Science</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-header">
+                <span class="cv-entry-title">Mahanama College, Colombo</span>
+                <span class="cv-entry-date">2009 – 2023</span>
+              </div>
+              <div class="cv-entry-sub">GCE A/L (Mathematics): 2A, 1B &nbsp;·&nbsp; GCE O/L: 9A</div>
+            </div>
+
+            <div class="cv-section-heading">Projects</div>
+            <div class="cv-entry">
+              <div class="cv-entry-header">
+                <span class="cv-entry-title">RideMachan <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java, JavaScript, HTML/CSS)</span></span>
+                <a href="https://github.com/Senaath-Suraweera/RideMachan" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+              <ul class="cv-bullets">
+                <li>Built a full-stack ride request management web application where users can submit requests and drivers can accept and manage them.</li>
+                <li>Implemented backend logic in Java with a clean HTML/CSS/JavaScript frontend interface.</li>
+              </ul>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-header">
+                <span class="cv-entry-title">Recursive Descent Parser <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(C)</span></span>
+                <a href="https://github.com/Senaath-Suraweera/Recursive-Descent-Parser-with-Integrated-Interpreter" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+              <ul class="cv-bullets">
+                <li>Hand-wrote a recursive descent parser and interpreter in C without any parser-generator tooling.</li>
+                <li>Parses and evaluates arithmetic and logical expressions by walking a grammar rule set.</li>
+              </ul>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-header">
+                <span class="cv-entry-title">Get APOD <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java, JavaFX)</span></span>
+                <a href="https://github.com/Senaath-Suraweera/Get-APOD" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+              <ul class="cv-bullets">
+                <li>Developed a JavaFX desktop application that fetches and displays NASA's Astronomy Picture of the Day via the NASA public API.</li>
+                <li>Supports date-based browsing with image display and metadata (titles, explanations).</li>
+              </ul>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-header">
+                <span class="cv-entry-title">Edmonds-Karp Algorithm <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java)</span></span>
+                <a href="https://github.com/Senaath-Suraweera/NetworkFlow-Edmonds-Karp" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+              <ul class="cv-bullets">
+                <li>Implemented the Edmonds-Karp algorithm for maximum network flow using BFS-based augmenting path selection.</li>
+                <li>Achieves O(VE²) complexity with support for directed weighted graphs.</li>
+              </ul>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-header">
+                <span class="cv-entry-title">Dinic's Algorithm <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java)</span></span>
+                <a href="https://github.com/Senaath-Suraweera/NetworkFlow-Dinics" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+              <ul class="cv-bullets">
+                <li>Implemented Dinic's algorithm constructing level graphs via BFS and finding blocking flows using DFS.</li>
+                <li>Achieves O(V²E) complexity, outperforming Ford-Fulkerson on dense graphs.</li>
+              </ul>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-header">
+                <span class="cv-entry-title">Middleware Architectures <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java)</span></span>
+                <a href="https://github.com/Senaath-Suraweera/Middleware-Project-Based-Leaning" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+              <ul class="cv-bullets">
+                <li>Explored common middleware patterns including message brokers, RPC, and event-driven communication.</li>
+                <li>Each module demonstrates a different middleware style with practical, runnable examples.</li>
+              </ul>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-header">
+                <span class="cv-entry-title">Ticket Simulation <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java)</span></span>
+                <a href="https://github.com/Senaath-Suraweera/Ticket-Simulation" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+              <ul class="cv-bullets">
+                <li>Built a multi-threaded ticket booking simulation modelling concurrent vendor and customer threads competing for a shared ticket pool.</li>
+                <li>Demonstrates synchronization, thread safety, and producer-consumer patterns.</li>
+              </ul>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-header">
+                <span class="cv-entry-title">Advanced Ludo Simulation <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java, LWJGL)</span></span>
+                <a href="https://github.com/Senaath-Suraweera/Ludo-LWJGL" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+              <ul class="cv-bullets">
+                <li>Developed a complete Ludo game simulation with structured game logic and interactive CLI interface.</li>
+                <li>Implemented efficient algorithms for gameplay mechanics and state management.</li>
+              </ul>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-header">
+                <span class="cv-entry-title">Plane Ticket Booking System <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java)</span></span>
+              </div>
+              <ul class="cv-bullets">
+                <li>Designed and implemented a seat reservation system using Object-Oriented Programming principles.</li>
+                <li>Handled booking logic, seat allocation, and user data management.</li>
+              </ul>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-header">
+                <span class="cv-entry-title">2D Arcade Shooter <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java)</span></span>
+                <a href="https://github.com/Senaath-Suraweera/Shooter" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+              <ul class="cv-bullets">
+                <li>Built a 2D shooter game from scratch without a game engine.</li>
+                <li>Implemented collision detection, scoring systems, and real-time gameplay logic.</li>
+              </ul>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-header">
+                <span class="cv-entry-title">Student Progression Predictor <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Python)</span></span>
+                <a href="https://github.com/Senaath-Suraweera/Progression-Report-Script" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+              <ul class="cv-bullets">
+                <li>Developed a system to predict student outcomes using data analysis techniques.</li>
+                <li>Visualized results using histograms for better interpretation.</li>
+              </ul>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-header">
+                <span class="cv-entry-title">To-Do Application <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(C / Python)</span></span>
+                <a href="https://github.com/Senaath-Suraweera/Todo-List" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+              <ul class="cv-bullets">
+                <li>Created a task management system using linked lists and file storage (CSV).</li>
+                <li>Enabled efficient data handling and persistent storage.</li>
+              </ul>
+            </div>
+
+            <div class="cv-section-heading">Technical Skills</div>
+            <div class="cv-skills-row"><strong>Programming:</strong> Java, C, C++, Python</div>
+            <div class="cv-skills-row"><strong>Web Development:</strong> HTML, CSS, JavaScript, React</div>
+            <div class="cv-skills-row"><strong>Backend &amp; Databases:</strong> Spring Boot, Django, SQL</div>
+            <div class="cv-skills-row"><strong>Tools:</strong> Git, GitHub, MySQL, Notion, ClickUp</div>
+
+            <div class="cv-section-heading">Core Competencies</div>
+            <div class="cv-pill-list">
+              <span class="cv-pill">Problem Solving &amp; Critical Thinking</span>
+              <span class="cv-pill">Teamwork &amp; Leadership</span>
+              <span class="cv-pill">Communication Skills</span>
+              <span class="cv-pill">Time Management &amp; Adaptability</span>
+            </div>
+
+            <div class="cv-section-heading">Extracurricular Activities</div>
+            <ul class="cv-bullets">
+              <li>President – Astronomy Society, Mahanama College</li>
+              <li>President – Buddhist Society, Mahanama College</li>
+              <li>Member – Rotaract Club of Colombo West</li>
+              <li>Member – ICT Society</li>
+              <li>Student Parliament Member &amp; Junior Prefect</li>
+            </ul>
+
+            <div class="cv-section-heading">Interests</div>
+            <div class="cv-pill-list">
+              <span class="cv-pill">Music</span>
+              <span class="cv-pill">Weightlifting</span>
+              <span class="cv-pill">Chess</span>
+            </div>
+
+            <div class="cv-section-heading">References</div>
+            <div class="cv-ref-grid">
+              <div class="cv-ref-card">
+                <strong>Prof. A.M. Attygalla</strong>
+                Professor of Maxillofacial Surgery, University of Peradeniya<br>
+                +94 777 282 993 &nbsp;·&nbsp; <a href="mailto:amattygalla@dental.pdn.ac.lk" style="color:var(--accent2);text-decoration:none;">amattygalla@dental.pdn.ac.lk</a>
+              </div>
+              <div class="cv-ref-card">
+                <strong>Shehan Kumar</strong>
+                Visiting Lecturer, IIT<br>
+                +94 727 249 324 &nbsp;·&nbsp; <a href="mailto:shehanrk@gmail.com" style="color:var(--accent2);text-decoration:none;">shehanrk@gmail.com</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer>
       <p>Designed & built by <span>Senaath Suraweera</span> &mdash; 2025</p>
@@ -1337,10 +1986,10 @@
     <script>
       // ── Typed hero role text ──────────────────────────────────
       const roles = [
-        "Software Engineer",
-        "Java Developer",
         "Backend Engineer",
-        "System Programmer",
+        "Spring Boot Developer",
+        "AI Engineer",
+        "Systems Programmer",
       ];
       let roleIdx = 0,
         charIdx = 0,
@@ -1409,6 +2058,30 @@
           const factor = (i + 1) * 0.4;
           orb.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
         });
+      });
+
+      // ── CV Modal ──────────────────────────────────────────────
+      const overlay = document.getElementById("cv-modal-overlay");
+      const openBtn = document.getElementById("open-cv-btn");
+      const closeBtn = document.getElementById("close-cv-btn");
+
+      function openModal() {
+        overlay.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        overlay.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      openBtn.addEventListener("click", openModal);
+      closeBtn.addEventListener("click", closeModal);
+      overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) closeModal();
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
       });
     </script>
   </body>
