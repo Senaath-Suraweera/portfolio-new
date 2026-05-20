@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Senaath Suraweera — Portfolio</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%237c3aed'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Inter,sans-serif' font-weight='700' font-size='18' fill='white'>S</text></svg>" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%237c3aed'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Inter,sans-serif' font-weight='700' font-size='18' fill='white'>S</text></svg>"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -921,7 +925,9 @@
         overflow: hidden;
         transform: translateY(24px) scale(0.97);
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(124, 58, 237, 0.15);
+        box-shadow:
+          0 32px 80px rgba(0, 0, 0, 0.6),
+          0 0 0 1px rgba(124, 58, 237, 0.15);
       }
 
       .cv-modal-overlay.open .cv-modal {
@@ -1153,8 +1159,12 @@
       }
 
       @media (max-width: 600px) {
-        .cv-modal-body { padding: 24px 20px; }
-        .cv-ref-grid { grid-template-columns: 1fr; }
+        .cv-modal-body {
+          padding: 24px 20px;
+        }
+        .cv-ref-grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -1187,9 +1197,8 @@
           <span id="typed-role"></span><span class="typed-cursor"></span>
         </h1>
         <p class="hero-sub">
-          I build robust backend systems and AI-powered applications — from
-          Spring Boot microservices to low-level C programs and intelligent
-          pipelines.
+          I build robust backend systems and AI-powered applications from Spring
+          Boot microservices to low-level C programs and intelligent pipelines.
         </p>
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">
@@ -1239,9 +1248,9 @@
               systems that are reliable under pressure.
             </p>
             <p>
-              When I'm not coding, I explore low-level systems programming,
+              <!-- When I'm not coding, I explore low-level systems programming,
               experiment with LLMs and AI tooling, and dig into distributed
-              systems design.
+              systems design. -->
             </p>
             <div class="about-stats">
               <div class="stat">
@@ -1757,11 +1766,21 @@
 
     <!-- CV Modal -->
     <div class="cv-modal-overlay" id="cv-modal-overlay">
-      <div class="cv-modal" role="dialog" aria-modal="true" aria-label="Curriculum Vitae">
+      <div
+        class="cv-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Curriculum Vitae"
+      >
         <div class="cv-modal-header">
           <h3><i class="fas fa-file-alt"></i> Curriculum Vitae</h3>
           <div class="cv-modal-actions">
-            <a href="cv.pdf" download="Senaath_Suraweera_CV.pdf" class="btn btn-ghost" style="padding:8px 16px;font-size:0.82rem;">
+            <a
+              href="cv.pdf"
+              download="Senaath_Suraweera_CV.pdf"
+              class="btn btn-ghost"
+              style="padding: 8px 16px; font-size: 0.82rem"
+            >
               <i class="fas fa-download"></i> Download PDF
             </a>
             <button class="cv-close-btn" id="close-cv-btn" aria-label="Close">
@@ -1771,31 +1790,51 @@
         </div>
         <div class="cv-modal-body">
           <div class="cv-content">
-
             <div class="cv-name">SENAATH SURAWEERA</div>
             <div class="cv-subtitle">Computer Science Undergraduate</div>
             <div class="cv-contact-line">
-              <a href="mailto:senaathsuraweera2003@gmail.com">senaathsuraweera2003@gmail.com</a>
-              &nbsp;|&nbsp; +94 705 216 508 &nbsp;|&nbsp; Battaramulla, Sri Lanka
-              &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/senaath-suraweera" target="_blank" rel="noopener">linkedin.com/in/senaath-suraweera</a>
+              <a href="mailto:senaathsuraweera2003@gmail.com"
+                >senaathsuraweera2003@gmail.com</a
+              >
+              &nbsp;|&nbsp; +94 705 216 508 &nbsp;|&nbsp; Battaramulla, Sri
+              Lanka &nbsp;|&nbsp;
+              <a
+                href="https://www.linkedin.com/in/senaath-suraweera"
+                target="_blank"
+                rel="noopener"
+                >linkedin.com/in/senaath-suraweera</a
+              >
             </div>
 
             <div class="cv-section-heading">Profile</div>
-            <p style="font-size:0.88rem;color:var(--text2);line-height:1.7;">
-              Motivated Computer Science undergraduate with a strong foundation in software development, problem-solving, and system design. Experienced in developing full-stack applications and academic projects using modern technologies. Passionate about building scalable solutions and continuously learning emerging technologies.
+            <p
+              style="font-size: 0.88rem; color: var(--text2); line-height: 1.7"
+            >
+              Motivated Computer Science undergraduate with a strong foundation
+              in software development, problem-solving, and system design.
+              Experienced in developing full-stack applications and academic
+              projects using modern technologies. Passionate about building
+              scalable solutions and continuously learning emerging
+              technologies.
             </p>
 
             <div class="cv-section-heading">Education</div>
             <div class="cv-entry">
               <div class="cv-entry-header">
-                <span class="cv-entry-title">University of Colombo School of Computing</span>
+                <span class="cv-entry-title"
+                  >University of Colombo School of Computing</span
+                >
                 <span class="cv-entry-date">Present</span>
               </div>
-              <div class="cv-entry-sub">B.Sc. (General) in Computer Science</div>
+              <div class="cv-entry-sub">
+                B.Sc. (General) in Computer Science
+              </div>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-header">
-                <span class="cv-entry-title">Informatics Institute of Technology</span>
+                <span class="cv-entry-title"
+                  >Informatics Institute of Technology</span
+                >
                 <span class="cv-entry-date">Present</span>
               </div>
               <div class="cv-entry-sub">B.Sc. (Hons) in Computer Science</div>
@@ -1805,139 +1844,407 @@
                 <span class="cv-entry-title">Mahanama College, Colombo</span>
                 <span class="cv-entry-date">2009 – 2023</span>
               </div>
-              <div class="cv-entry-sub">GCE A/L (Mathematics): 2A, 1B &nbsp;·&nbsp; GCE O/L: 9A</div>
+              <div class="cv-entry-sub">
+                GCE A/L (Mathematics): 2A, 1B &nbsp;·&nbsp; GCE O/L: 9A
+              </div>
             </div>
 
             <div class="cv-section-heading">Projects</div>
             <div class="cv-entry">
               <div class="cv-entry-header">
-                <span class="cv-entry-title">RideMachan <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java, JavaScript, HTML/CSS)</span></span>
-                <a href="https://github.com/Senaath-Suraweera/RideMachan" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+                <span class="cv-entry-title"
+                  >RideMachan
+                  <span
+                    style="
+                      font-weight: 400;
+                      color: var(--text2);
+                      font-size: 0.82rem;
+                    "
+                    >(Java, JavaScript, HTML/CSS)</span
+                  ></span
+                >
+                <a
+                  href="https://github.com/Senaath-Suraweera/RideMachan"
+                  target="_blank"
+                  rel="noopener"
+                  class="cv-entry-link"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
               </div>
               <ul class="cv-bullets">
-                <li>Built a full-stack ride request management web application where users can submit requests and drivers can accept and manage them.</li>
-                <li>Implemented backend logic in Java with a clean HTML/CSS/JavaScript frontend interface.</li>
+                <li>
+                  Built a full-stack ride request management web application
+                  where users can submit requests and drivers can accept and
+                  manage them.
+                </li>
+                <li>
+                  Implemented backend logic in Java with a clean
+                  HTML/CSS/JavaScript frontend interface.
+                </li>
               </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-header">
-                <span class="cv-entry-title">Recursive Descent Parser <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(C)</span></span>
-                <a href="https://github.com/Senaath-Suraweera/Recursive-Descent-Parser-with-Integrated-Interpreter" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+                <span class="cv-entry-title"
+                  >Recursive Descent Parser
+                  <span
+                    style="
+                      font-weight: 400;
+                      color: var(--text2);
+                      font-size: 0.82rem;
+                    "
+                    >(C)</span
+                  ></span
+                >
+                <a
+                  href="https://github.com/Senaath-Suraweera/Recursive-Descent-Parser-with-Integrated-Interpreter"
+                  target="_blank"
+                  rel="noopener"
+                  class="cv-entry-link"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
               </div>
               <ul class="cv-bullets">
-                <li>Hand-wrote a recursive descent parser and interpreter in C without any parser-generator tooling.</li>
-                <li>Parses and evaluates arithmetic and logical expressions by walking a grammar rule set.</li>
+                <li>
+                  Hand-wrote a recursive descent parser and interpreter in C
+                  without any parser-generator tooling.
+                </li>
+                <li>
+                  Parses and evaluates arithmetic and logical expressions by
+                  walking a grammar rule set.
+                </li>
               </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-header">
-                <span class="cv-entry-title">Get APOD <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java, JavaFX)</span></span>
-                <a href="https://github.com/Senaath-Suraweera/Get-APOD" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+                <span class="cv-entry-title"
+                  >Get APOD
+                  <span
+                    style="
+                      font-weight: 400;
+                      color: var(--text2);
+                      font-size: 0.82rem;
+                    "
+                    >(Java, JavaFX)</span
+                  ></span
+                >
+                <a
+                  href="https://github.com/Senaath-Suraweera/Get-APOD"
+                  target="_blank"
+                  rel="noopener"
+                  class="cv-entry-link"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
               </div>
               <ul class="cv-bullets">
-                <li>Developed a JavaFX desktop application that fetches and displays NASA's Astronomy Picture of the Day via the NASA public API.</li>
-                <li>Supports date-based browsing with image display and metadata (titles, explanations).</li>
+                <li>
+                  Developed a JavaFX desktop application that fetches and
+                  displays NASA's Astronomy Picture of the Day via the NASA
+                  public API.
+                </li>
+                <li>
+                  Supports date-based browsing with image display and metadata
+                  (titles, explanations).
+                </li>
               </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-header">
-                <span class="cv-entry-title">Edmonds-Karp Algorithm <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java)</span></span>
-                <a href="https://github.com/Senaath-Suraweera/NetworkFlow-Edmonds-Karp" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+                <span class="cv-entry-title"
+                  >Edmonds-Karp Algorithm
+                  <span
+                    style="
+                      font-weight: 400;
+                      color: var(--text2);
+                      font-size: 0.82rem;
+                    "
+                    >(Java)</span
+                  ></span
+                >
+                <a
+                  href="https://github.com/Senaath-Suraweera/NetworkFlow-Edmonds-Karp"
+                  target="_blank"
+                  rel="noopener"
+                  class="cv-entry-link"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
               </div>
               <ul class="cv-bullets">
-                <li>Implemented the Edmonds-Karp algorithm for maximum network flow using BFS-based augmenting path selection.</li>
-                <li>Achieves O(VE²) complexity with support for directed weighted graphs.</li>
+                <li>
+                  Implemented the Edmonds-Karp algorithm for maximum network
+                  flow using BFS-based augmenting path selection.
+                </li>
+                <li>
+                  Achieves O(VE²) complexity with support for directed weighted
+                  graphs.
+                </li>
               </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-header">
-                <span class="cv-entry-title">Dinic's Algorithm <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java)</span></span>
-                <a href="https://github.com/Senaath-Suraweera/NetworkFlow-Dinics" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+                <span class="cv-entry-title"
+                  >Dinic's Algorithm
+                  <span
+                    style="
+                      font-weight: 400;
+                      color: var(--text2);
+                      font-size: 0.82rem;
+                    "
+                    >(Java)</span
+                  ></span
+                >
+                <a
+                  href="https://github.com/Senaath-Suraweera/NetworkFlow-Dinics"
+                  target="_blank"
+                  rel="noopener"
+                  class="cv-entry-link"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
               </div>
               <ul class="cv-bullets">
-                <li>Implemented Dinic's algorithm constructing level graphs via BFS and finding blocking flows using DFS.</li>
-                <li>Achieves O(V²E) complexity, outperforming Ford-Fulkerson on dense graphs.</li>
+                <li>
+                  Implemented Dinic's algorithm constructing level graphs via
+                  BFS and finding blocking flows using DFS.
+                </li>
+                <li>
+                  Achieves O(V²E) complexity, outperforming Ford-Fulkerson on
+                  dense graphs.
+                </li>
               </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-header">
-                <span class="cv-entry-title">Middleware Architectures <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java)</span></span>
-                <a href="https://github.com/Senaath-Suraweera/Middleware-Project-Based-Leaning" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+                <span class="cv-entry-title"
+                  >Middleware Architectures
+                  <span
+                    style="
+                      font-weight: 400;
+                      color: var(--text2);
+                      font-size: 0.82rem;
+                    "
+                    >(Java)</span
+                  ></span
+                >
+                <a
+                  href="https://github.com/Senaath-Suraweera/Middleware-Project-Based-Leaning"
+                  target="_blank"
+                  rel="noopener"
+                  class="cv-entry-link"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
               </div>
               <ul class="cv-bullets">
-                <li>Explored common middleware patterns including message brokers, RPC, and event-driven communication.</li>
-                <li>Each module demonstrates a different middleware style with practical, runnable examples.</li>
+                <li>
+                  Explored common middleware patterns including message brokers,
+                  RPC, and event-driven communication.
+                </li>
+                <li>
+                  Each module demonstrates a different middleware style with
+                  practical, runnable examples.
+                </li>
               </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-header">
-                <span class="cv-entry-title">Ticket Simulation <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java)</span></span>
-                <a href="https://github.com/Senaath-Suraweera/Ticket-Simulation" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+                <span class="cv-entry-title"
+                  >Ticket Simulation
+                  <span
+                    style="
+                      font-weight: 400;
+                      color: var(--text2);
+                      font-size: 0.82rem;
+                    "
+                    >(Java)</span
+                  ></span
+                >
+                <a
+                  href="https://github.com/Senaath-Suraweera/Ticket-Simulation"
+                  target="_blank"
+                  rel="noopener"
+                  class="cv-entry-link"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
               </div>
               <ul class="cv-bullets">
-                <li>Built a multi-threaded ticket booking simulation modelling concurrent vendor and customer threads competing for a shared ticket pool.</li>
-                <li>Demonstrates synchronization, thread safety, and producer-consumer patterns.</li>
+                <li>
+                  Built a multi-threaded ticket booking simulation modelling
+                  concurrent vendor and customer threads competing for a shared
+                  ticket pool.
+                </li>
+                <li>
+                  Demonstrates synchronization, thread safety, and
+                  producer-consumer patterns.
+                </li>
               </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-header">
-                <span class="cv-entry-title">Advanced Ludo Simulation <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java, LWJGL)</span></span>
-                <a href="https://github.com/Senaath-Suraweera/Ludo-LWJGL" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+                <span class="cv-entry-title"
+                  >Advanced Ludo Simulation
+                  <span
+                    style="
+                      font-weight: 400;
+                      color: var(--text2);
+                      font-size: 0.82rem;
+                    "
+                    >(Java, LWJGL)</span
+                  ></span
+                >
+                <a
+                  href="https://github.com/Senaath-Suraweera/Ludo-LWJGL"
+                  target="_blank"
+                  rel="noopener"
+                  class="cv-entry-link"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
               </div>
               <ul class="cv-bullets">
-                <li>Developed a complete Ludo game simulation with structured game logic and interactive CLI interface.</li>
-                <li>Implemented efficient algorithms for gameplay mechanics and state management.</li>
+                <li>
+                  Developed a complete Ludo game simulation with structured game
+                  logic and interactive CLI interface.
+                </li>
+                <li>
+                  Implemented efficient algorithms for gameplay mechanics and
+                  state management.
+                </li>
               </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-header">
-                <span class="cv-entry-title">Plane Ticket Booking System <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java)</span></span>
+                <span class="cv-entry-title"
+                  >Plane Ticket Booking System
+                  <span
+                    style="
+                      font-weight: 400;
+                      color: var(--text2);
+                      font-size: 0.82rem;
+                    "
+                    >(Java)</span
+                  ></span
+                >
               </div>
               <ul class="cv-bullets">
-                <li>Designed and implemented a seat reservation system using Object-Oriented Programming principles.</li>
-                <li>Handled booking logic, seat allocation, and user data management.</li>
+                <li>
+                  Designed and implemented a seat reservation system using
+                  Object-Oriented Programming principles.
+                </li>
+                <li>
+                  Handled booking logic, seat allocation, and user data
+                  management.
+                </li>
               </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-header">
-                <span class="cv-entry-title">2D Arcade Shooter <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Java)</span></span>
-                <a href="https://github.com/Senaath-Suraweera/Shooter" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+                <span class="cv-entry-title"
+                  >2D Arcade Shooter
+                  <span
+                    style="
+                      font-weight: 400;
+                      color: var(--text2);
+                      font-size: 0.82rem;
+                    "
+                    >(Java)</span
+                  ></span
+                >
+                <a
+                  href="https://github.com/Senaath-Suraweera/Shooter"
+                  target="_blank"
+                  rel="noopener"
+                  class="cv-entry-link"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
               </div>
               <ul class="cv-bullets">
-                <li>Built a 2D shooter game from scratch without a game engine.</li>
-                <li>Implemented collision detection, scoring systems, and real-time gameplay logic.</li>
+                <li>
+                  Built a 2D shooter game from scratch without a game engine.
+                </li>
+                <li>
+                  Implemented collision detection, scoring systems, and
+                  real-time gameplay logic.
+                </li>
               </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-header">
-                <span class="cv-entry-title">Student Progression Predictor <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(Python)</span></span>
-                <a href="https://github.com/Senaath-Suraweera/Progression-Report-Script" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+                <span class="cv-entry-title"
+                  >Student Progression Predictor
+                  <span
+                    style="
+                      font-weight: 400;
+                      color: var(--text2);
+                      font-size: 0.82rem;
+                    "
+                    >(Python)</span
+                  ></span
+                >
+                <a
+                  href="https://github.com/Senaath-Suraweera/Progression-Report-Script"
+                  target="_blank"
+                  rel="noopener"
+                  class="cv-entry-link"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
               </div>
               <ul class="cv-bullets">
-                <li>Developed a system to predict student outcomes using data analysis techniques.</li>
-                <li>Visualized results using histograms for better interpretation.</li>
+                <li>
+                  Developed a system to predict student outcomes using data
+                  analysis techniques.
+                </li>
+                <li>
+                  Visualized results using histograms for better interpretation.
+                </li>
               </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-header">
-                <span class="cv-entry-title">To-Do Application <span style="font-weight:400;color:var(--text2);font-size:0.82rem;">(C / Python)</span></span>
-                <a href="https://github.com/Senaath-Suraweera/Todo-List" target="_blank" rel="noopener" class="cv-entry-link"><i class="fab fa-github"></i> GitHub</a>
+                <span class="cv-entry-title"
+                  >To-Do Application
+                  <span
+                    style="
+                      font-weight: 400;
+                      color: var(--text2);
+                      font-size: 0.82rem;
+                    "
+                    >(C / Python)</span
+                  ></span
+                >
+                <a
+                  href="https://github.com/Senaath-Suraweera/Todo-List"
+                  target="_blank"
+                  rel="noopener"
+                  class="cv-entry-link"
+                  ><i class="fab fa-github"></i> GitHub</a
+                >
               </div>
               <ul class="cv-bullets">
-                <li>Created a task management system using linked lists and file storage (CSV).</li>
+                <li>
+                  Created a task management system using linked lists and file
+                  storage (CSV).
+                </li>
                 <li>Enabled efficient data handling and persistent storage.</li>
               </ul>
             </div>
 
             <div class="cv-section-heading">Technical Skills</div>
-            <div class="cv-skills-row"><strong>Programming:</strong> Java, C, C++, Python</div>
-            <div class="cv-skills-row"><strong>Web Development:</strong> HTML, CSS, JavaScript, React</div>
-            <div class="cv-skills-row"><strong>Backend &amp; Databases:</strong> Spring Boot, Django, SQL</div>
-            <div class="cv-skills-row"><strong>Tools:</strong> Git, GitHub, MySQL, Notion, ClickUp</div>
+            <div class="cv-skills-row">
+              <strong>Programming:</strong> Java, C, C++, Python
+            </div>
+            <div class="cv-skills-row">
+              <strong>Web Development:</strong> HTML, CSS, JavaScript, React
+            </div>
+            <div class="cv-skills-row">
+              <strong>Backend &amp; Databases:</strong> Spring Boot, Django, SQL
+            </div>
+            <div class="cv-skills-row">
+              <strong>Tools:</strong> Git, GitHub, MySQL, Notion, ClickUp
+            </div>
 
             <div class="cv-section-heading">Core Competencies</div>
             <div class="cv-pill-list">
-              <span class="cv-pill">Problem Solving &amp; Critical Thinking</span>
+              <span class="cv-pill"
+                >Problem Solving &amp; Critical Thinking</span
+              >
               <span class="cv-pill">Teamwork &amp; Leadership</span>
               <span class="cv-pill">Communication Skills</span>
               <span class="cv-pill">Time Management &amp; Adaptability</span>
@@ -1963,16 +2270,25 @@
             <div class="cv-ref-grid">
               <div class="cv-ref-card">
                 <strong>Prof. A.M. Attygalla</strong>
-                Professor of Maxillofacial Surgery, University of Peradeniya<br>
-                +94 777 282 993 &nbsp;·&nbsp; <a href="mailto:amattygalla@dental.pdn.ac.lk" style="color:var(--accent2);text-decoration:none;">amattygalla@dental.pdn.ac.lk</a>
+                Professor of Maxillofacial Surgery, University of Peradeniya<br />
+                +94 777 282 993 &nbsp;·&nbsp;
+                <a
+                  href="mailto:amattygalla@dental.pdn.ac.lk"
+                  style="color: var(--accent2); text-decoration: none"
+                  >amattygalla@dental.pdn.ac.lk</a
+                >
               </div>
               <div class="cv-ref-card">
                 <strong>Shehan Kumar</strong>
-                Visiting Lecturer, IIT<br>
-                +94 727 249 324 &nbsp;·&nbsp; <a href="mailto:shehanrk@gmail.com" style="color:var(--accent2);text-decoration:none;">shehanrk@gmail.com</a>
+                Visiting Lecturer, IIT<br />
+                +94 727 249 324 &nbsp;·&nbsp;
+                <a
+                  href="mailto:shehanrk@gmail.com"
+                  style="color: var(--accent2); text-decoration: none"
+                  >shehanrk@gmail.com</a
+                >
               </div>
             </div>
-
           </div>
         </div>
       </div>
